@@ -1,8 +1,10 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg3 from "../assets/img/Frame 1 (8).png";
+import projImg4 from "../assets/img/Frame 1 (7).png";
+import projImg5 from "../assets/img/Frame 1 (2).png";
+import projImg6 from "../assets/img/Frame 1 (11).png";
+import projImg7 from "../assets/img/Frame 1 (9).png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,35 +13,39 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Movie Watchlist App",
+      description: "Your ultimate movie companion. Explore, search, and effortlessly add movies to your personalized watchlist. Elevate your movie experience with ease.",
+      imgUrl: projImg6,
+      link: "https://rose534.github.io/Final-project/"
+      
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Ecommerce App",
+      description: "Your Ecommerce Powerhouse. Take control of your online store like never before. Easily delete, upload, and create products to entice buyers. Elevate your business with ShopMasters and make every sale count.",
+      imgUrl: projImg7,
+      link: "https://phase-4-project-ten.vercel.app/"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Portfolio App",
+      description: "Unleash Your Creativity. Showcase your work seamlessly with our portfolio app. Upload, arrange, and display your pictures effortlessly. Elevate your portfolio and captivate your audience with Portlo.",
       imgUrl: projImg3,
+      link: "https://portfolio-rose534.vercel.app/"
+    }
+  ];
+
+  const uxUiProjects = [
+    {
+      title: "Drama Quest",
+      description: "Your Gateway to K-Drama Exploration. Immerse yourself in the world of K-Dramas as you explore, search, and add your favorites to your watchlist. Share your thoughts, leave comments, and connect with fellow enthusiasts. Embark on a journey of drama discovery and connection with Drama Quest.",
+      imgUrl: projImg5,
+      link: "https://wambuirose5343.wixsite.com/my-site/projects",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+      title: "Brandify 3D",
+      description: "Revolutionizing Personalized T-Shirt Design. Discover a seamless experience as users create unique t-shirts with logos, images, and AI-generated designs. Witness intuitive customization, effortless logo integration, and a 3D preview. Explore the fusion of technology and fashion, where creativity knows no bounds, with Brandify 3D.",
+      imgUrl: projImg4,
+      link: "https://wambuirose5343.wixsite.com/my-site/brandify"
+    }
   ];
 
   return (
@@ -51,14 +57,14 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Welcome to my projects showcase, where innovation meets implementation. Each project is a testament to my dedication and creative prowess in the realms of Web Development, UX/UI Design, and Web Design.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+    <Nav.Item>
+                      <Nav.Link eventKey="first">Web development</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                      <Nav.Link eventKey="second">UX/UI</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">Tab 3</Nav.Link>
@@ -78,6 +84,20 @@ export const Projects = () => {
                           })
                         }
                       </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="second">
+                      <Row>
+                        {uxUiProjects.map((project, index) => {
+                          return (
+                          <ProjectCard
+                            key={index}
+                            {...project}
+                          />
+                        )
+                        })
+                      }
+                      </Row>
+                    
                     </Tab.Pane>
                     <Tab.Pane eventKey="section">
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
