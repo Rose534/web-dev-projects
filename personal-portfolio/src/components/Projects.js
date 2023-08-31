@@ -105,7 +105,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="third">
                        <div className="d-flex flex-column align-items-center">
                          <p>Welcome to my GitHub profile! You can find my open-source projects and contributions on my GitHub repository.</p>
-                           <a href="https://github.com/Rose534" target="_blank" rel="noopener noreferrer" style={{ color: "grey" }}>
+                           <a href="https://github.com/Rose534" target="_blank" rel="noopener noreferrer" style={{ color: "grey", fontSize: "20px" }}>
                                 Visit my GitHub profile
                                    </a>
                                       </div>
