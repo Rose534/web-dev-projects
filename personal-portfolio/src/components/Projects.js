@@ -67,7 +67,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="second">UX/UI</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">Github</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -103,8 +103,16 @@ export const Projects = () => {
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
+                       <div className="d-flex flex-column align-items-center">
+                         <p>Welcome to my GitHub profile! You can find my open-source projects and contributions on my GitHub repository.</p>
+                           <a href="https://github.com/Rose534" target="_blank" rel="noopener noreferrer" style={{ color: "grey" }}>
+                                Visit my GitHub profile
+                                   </a>
+                                      </div>
+                                    </Tab.Pane>
+
+
+
                   </Tab.Content>
                 </Tab.Container>
               </div>}

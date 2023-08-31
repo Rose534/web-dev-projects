@@ -7,6 +7,12 @@ const nodemailer = require("nodemailer");
 const app = express();
 app.use(cors());
 app.use(express.json());
+const corsOptions = {
+  origin: "https://localhost:3000/", // Replace with your actual React app's domain
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
+
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
 console.log(process.env.EMAIL_USER);
@@ -15,7 +21,7 @@ console.log(process.env.EMAIL_PASS);
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "********@gmail.com",
+    user: "wambuirose534@gmail.com",
     pass: ""
   },
 });
